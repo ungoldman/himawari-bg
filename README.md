@@ -15,7 +15,7 @@
 
 ![](screenshot.jpg)
 
-[Himawari 8](himawari8.nict.go.jp) is a geostationary weather satellite deployed by the Japan Meteorological Agency. It takes cool pictures of the whole earth all day long! Wow!
+[Himawari 8](http://himawari8.nict.go.jp) is a geostationary weather satellite deployed by the Japan Meteorological Agency. It takes cool pictures of the whole earth all day long! Wow!
 
 ## Install
 
