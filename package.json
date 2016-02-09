@@ -1,0 +1,44 @@
+{
+  "name": "himawari-bg",
+  "description": "Set the latest image from Himawari 8 as your desktop background",
+  "version": "1.0.0-alpha",
+  "author": "Nate Goldman <nate@ngoldman.me>",
+  "bugs": {
+    "url": "https://github.com/ngoldman/himawari-bg/issues"
+  },
+  "dependencies": {
+    "cliclopts": "^1.1.1",
+    "himawari": "^1.1.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "progress": "^1.1.8",
+    "untildify": "^2.1.0",
+    "wallpaper": "^2.1.0"
+  },
+  "devDependencies": {
+    "standard": "^6.0.4"
+  },
+  "bin": {
+    "himawari-bg": "./cli.js"
+  },
+  "homepage": "https://github.com/ngoldman/himawari-bg",
+  "keywords": [
+    "background",
+    "desktop",
+    "earth",
+    "himawari",
+    "himawari-8",
+    "satellite",
+    "wallpaper"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngoldman/himawari-bg.git"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "standard"
+  }
+}
