@@ -15,19 +15,22 @@
 
 ![](screenshot.jpg)
 
-Note: This is alpha quality! Tested only on OSX.
-
-:point_right: You have to set the background color of your desktop to black manually.
+[Himawari 8](himawari8.nict.go.jp) is a geostationary weather satellite deployed by the Japan Meteorological Agency. It takes cool pictures of the whole earth all day long! Wow!
 
 ## Install
 
 Warning: requires :zap: **magick** :zap:
+
+* [imagemagick](http://www.imagemagick.org/script/index.php)
+* [graphicsmagick](http://www.graphicsmagick.org)
 
 ```
 brew install imagemagick
 brew install graphicsmagick
 npm install himawari-bg
 ```
+
+Note: This is alpha quality! Tested only on OSX.
 
 ## Usage
 
@@ -66,6 +69,8 @@ bg({
   infrared: false
 })
 ```
+
+:point_right: You have to set the background color of your desktop to black manually if you want it to look as cool as possible.
 
 ### Command Line Interface
 
