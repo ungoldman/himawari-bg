@@ -21,8 +21,6 @@ Note: This is alpha quality! Tested only on OSX.
 
 ## Install
 
-## Install
-
 Warning: requires :zap: **magick** :zap:
 
 ```
