@@ -82,7 +82,7 @@ Usage: himawari-bg [options]
 
 ### Acknowledgement
 
-Thanks to [celoyd](https://github.com/celoyd) for the inspiring [glittering.blue](https://glittering.blue/) and [jakiewtf](https://github.com/jakiestfu) for creating [himawari.js](https://github.com/jakiestfu/himawari.js).
+Thanks to [celoyd](https://github.com/celoyd) for the inspiring [glittering.blue](https://glittering.blue/) and [jakiestfu](https://github.com/jakiestfu) for creating [himawari.js](https://github.com/jakiestfu/himawari.js).
 
 ## License
 
