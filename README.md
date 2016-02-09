@@ -17,6 +17,8 @@
 
 Note: This is alpha quality! Tested only on OSX.
 
+:point_right: You have to set the background color of your desktop to black manually.
+
 ## Install
 
 ```
