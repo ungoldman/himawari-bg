@@ -20,7 +20,7 @@ Note: This is alpha quality! Tested only on OSX.
 ## Install
 
 ```
-npm i -g himawari-bg
+npm install himawari-bg
 ```
 
 ## Usage
@@ -62,6 +62,14 @@ bg({
 ```
 
 ### Command Line Interface
+
+There is also a command-line interface available if you install with the `-g` option.
+
+```
+npm i -g himawari-bg
+```
+
+This installs a program called himawari-bg that can be used like so:
 
 ```
 Usage: himawari-bg [options]
