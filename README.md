@@ -83,7 +83,7 @@ bg({
   date: 'latest', // Or new Date() or a date string
 
   /**
-   * The zoom level of the image. Can be 1-5 (default: 1)
+   * The zoom level of the image. Can be 1-5 (default: 2)
    * Each zoom level requires more images to be downloaded and therefore stitched
    * together. Higher zoom yields a higher resolution image.
    * Default: 2
