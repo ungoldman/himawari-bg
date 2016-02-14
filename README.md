@@ -110,4 +110,4 @@ It turns out `himawari.js` was inspired by [this gist](https://gist.github.com/M
 
 ## License
 
-[ISC](LICENSE)
+[ISC](LICENSE.md)
