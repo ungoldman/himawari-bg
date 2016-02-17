@@ -17,6 +17,7 @@ module.exports = function (opts) {
     outfile: outfile,
     date: opts.date || 'latest',
     infrared: opts.infrared || false,
+    parallel: opts.parallel | true,
     chunk: function (info) {
       bar = bar || createProgressBar(info.total)
       bar.tick()

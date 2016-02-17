@@ -3,6 +3,7 @@
 var bg = require('./')
 var cliclopts = require('cliclopts')
 var minimist = require('minimist')
+var pkg = require('./package.json')
 
 var allowedOptions = [
   {
@@ -30,6 +31,19 @@ var allowedOptions = [
     default: false
   },
   {
+    name: 'parallel',
+    abbr: 'p',
+    help: 'Parallelize downloads for increased speeds (can be CPU intensive).',
+    boolean: true,
+    default: true
+  },
+  {
+    name: 'version',
+    abbr: 'v',
+    help: 'Show version information.',
+    boolean: true
+  },
+  {
     name: 'help',
     abbr: 'h',
     help: 'Show help.',
@@ -40,9 +54,20 @@ var allowedOptions = [
 var opts = cliclopts(allowedOptions)
 var argv = minimist(process.argv.slice(2), opts.options())
 
+if (argv.version) {
+  console.log(pkg.version)
+  process.exit()
+}
+
 if (argv.help) {
+  console.log()
   console.log('Usage: himawari-bg [options]')
+  console.log()
   opts.print()
+  console.log()
+  console.log('report an issue: https://github.com/ngoldman/himawari-bg/issues')
+  console.log()
+  console.log('himawari-bg@%s %s', pkg.version, __dirname)
   process.exit()
 }
 
