@@ -2,9 +2,9 @@
   "name": "himawari-bg",
   "description": "Set the latest image from Himawari 8 as your desktop background.",
   "version": "1.0.0-beta",
-  "author": "Nate Goldman <nate@ngoldman.me>",
+  "author": "Nate Goldman <ungoldman@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ngoldman/himawari-bg/issues"
+    "url": "https://github.com/ungoldman/himawari-bg/issues"
   },
   "dependencies": {
     "cliclopts": "^1.1.1",
@@ -21,7 +21,7 @@
   "bin": {
     "himawari-bg": "./cli.js"
   },
-  "homepage": "https://github.com/ngoldman/himawari-bg",
+  "homepage": "https://github.com/ungoldman/himawari-bg",
   "keywords": [
     "background",
     "desktop",
@@ -35,7 +35,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngoldman/himawari-bg.git"
+    "url": "https://github.com/ungoldman/himawari-bg.git"
   },
   "scripts": {
     "start": "node index.js",

@@ -65,7 +65,7 @@ if (argv.help) {
   console.log()
   opts.print()
   console.log()
-  console.log('report an issue: https://github.com/ngoldman/himawari-bg/issues')
+  console.log('report an issue: ' + pkg.bugs.url)
   console.log()
   console.log('himawari-bg@%s %s', pkg.version, __dirname)
   process.exit()

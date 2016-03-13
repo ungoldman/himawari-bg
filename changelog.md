@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * expand contributing guidelines
 
 ## 1.0.0-alpha.3
-* use himawari@^1.2.3 (ETIMEDOUT bug fix for [#5](https://github.com/ngoldman/himawari-bg/issues/5))
+* use himawari@^1.2.3 (ETIMEDOUT bug fix for [#5](https://github.com/ungoldman/himawari-bg/issues/5))
 * improve docs, add links
 * add example script
 

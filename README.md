@@ -8,8 +8,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/himawari-bg.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/himawari-bg
-[travis-image]: https://img.shields.io/travis/ngoldman/himawari-bg.svg?style=flat-square
-[travis-url]: https://travis-ci.org/ngoldman/himawari-bg
+[travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ungoldman/himawari-bg
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
 
@@ -132,7 +132,7 @@ Here are some useful links if you're interested in learning more about the Himaw
   - [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
   - [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
 - [himawari.js](https://github.com/jakiestfu/himawari.js) by @[jakiestfu](https://github.com/jakiestfu)
-- [himawari-urls](https://github.com/ngoldman/himawari-urls) by @[ngoldman](https://github.com/ngoldman)
+- [himawari-urls](https://github.com/ungoldman/himawari-urls) by @[ungoldman](https://github.com/ungoldman)
 
 ## Contributing
 
