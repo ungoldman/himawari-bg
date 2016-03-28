@@ -15,7 +15,9 @@
 
 ![](screenshot.jpg)
 
-[Himawari 8](http://himawari8.nict.go.jp/) is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes. Wow!
+[Himawari 8](http://himawari8.nict.go.jp/) is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes.
+
+`himawari-bg` is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
 
 ## Install
 
