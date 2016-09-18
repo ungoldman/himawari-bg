@@ -1,6 +1,6 @@
 # himawari-bg
 
-> Set the latest image from Himawari 8 as your desktop background.
+Set the latest image from Himawari 8 as your desktop background.
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
