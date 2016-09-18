@@ -3,7 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
+## [1.0.0](https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.0) - 2016-09-17
+
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.0-beta...v1.0.0)
+
 - lint: bump standard to latest version (^8), use snazzy
 - site: add scripts for generating a gh-pages site
 - ci: target node 6 only
