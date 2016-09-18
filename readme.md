@@ -6,6 +6,12 @@ Set the latest image from Himawari 8 as your desktop background.
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 
+## Overview
+
+[Himawari 8](http://himawari8.nict.go.jp/) is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes.
+
+`himawari-bg` is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
+
 [npm-image]: https://img.shields.io/npm/v/himawari-bg.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/himawari-bg
 [travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg?style=flat-square
@@ -14,10 +20,6 @@ Set the latest image from Himawari 8 as your desktop background.
 [standard-url]: http://npm.im/standard
 
 ![](screenshot.jpg)
-
-[Himawari 8](http://himawari8.nict.go.jp/) is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes.
-
-`himawari-bg` is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
 
 ## Install
 
