@@ -9,7 +9,7 @@ var allowedOptions = [
   {
     name: 'outfile',
     abbr: 'o',
-    help: 'Location to save image. (default: `~/Pictures/himawari-images/${Date.now()}.jpg`)'
+    help: 'Location to save image. (default: ~/Pictures/himawari-images/$TIMESTAMP.jpg)'
   },
   {
     name: 'zoom',

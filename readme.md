@@ -12,13 +12,6 @@ Set the latest image from Himawari 8 as your desktop background.
 
 `himawari-bg` is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
 
-[npm-image]: https://img.shields.io/npm/v/himawari-bg.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/himawari-bg
-[travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg?style=flat-square
-[travis-url]: https://travis-ci.org/ungoldman/himawari-bg
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[standard-url]: http://npm.im/standard
-
 ![](screenshot.jpg)
 
 ## Install
@@ -54,7 +47,7 @@ There are some options available if you'd like to go further:
 ```
 Usage: himawari-bg [options]
 
-    --outfile, -o         Location to save image. (default: `~/Pictures/himawari-images/${Date.now()}.jpg`)
+    --outfile, -o         Location to save image. (default: ~/Pictures/himawari-images/$TIMESTAMP.jpg)
     --zoom, -z            The zoom level of the image. Can be 1-5. (default: 2)
     --date, -d            Time of the picture desired. Can also be "latest". (default: "latest")
     --infrared, -i        Capture picture on the infrared spectrum. (default: false)
@@ -65,7 +58,7 @@ Usage: himawari-bg [options]
 
 ### Node.js
 
-`himawari-bg` can also be used as a node module by installing it normally:
+`himawari-bg` can also be used programmatically as a node module:
 
 ```
 npm install himawari-bg
@@ -145,3 +138,10 @@ Contributions welcome! Please read the [contributing guidelines](contributing.md
 ## License
 
 [ISC](LICENSE.md)
+
+[npm-image]: https://img.shields.io/npm/v/himawari-bg.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/himawari-bg
+[travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ungoldman/himawari-bg
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[standard-url]: http://npm.im/standard

@@ -3,6 +3,9 @@
   "description": "Set the latest image from Himawari 8 as your desktop background.",
   "version": "1.0.0-beta",
   "author": "Nate Goldman <ungoldman@gmail.com>",
+  "bin": {
+    "himawari-bg": "./cli.js"
+  },
   "bugs": {
     "url": "https://github.com/ungoldman/himawari-bg/issues"
   },
@@ -16,10 +19,12 @@
     "wallpaper": "^2.1.0"
   },
   "devDependencies": {
-    "standard": "^6.0.4"
-  },
-  "bin": {
-    "himawari-bg": "./cli.js"
+    "gh-pages": "^0.11.0",
+    "live-server": "^1.1.0",
+    "npm-run-all": "^3.1.0",
+    "sitedown": "^3.0.1",
+    "snazzy": "^5.0.0",
+    "standard": "^8.1.0"
   },
   "homepage": "https://github.com/ungoldman/himawari-bg",
   "keywords": [
@@ -38,7 +43,14 @@
     "url": "https://github.com/ungoldman/himawari-bg.git"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "standard"
+    "gh-pages": "npm run site && gh-pages -d site",
+    "serve:site": "live-server site",
+    "serve:watch": "npm run site:html -- -w",
+    "site": "run-s site:*",
+    "site:clean": "rm -rf site",
+    "site:html": "sitedown -b site -l docs/layout.html",
+    "site:img": "cp screenshot.jpg site/",
+    "start": "npm-run-all site --parallel serve:*",
+    "test": "standard | snazzy"
   }
 }
