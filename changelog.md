@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 - lint: bump standard to latest version (^8), use snazzy
 - site: add scripts for generating a gh-pages site
+- ci: target node 6 only
 
 ## 1.0.0-beta
 * parallelize downloads by default
