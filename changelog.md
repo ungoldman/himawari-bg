@@ -3,7 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
+## [1.0.1](https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.1) - 2016-10-03
+
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.0...v1.0.1)
 
 ### Fixes
 - bugfix: allow omitting options object ([#10](https://github.com/ungoldman/himawari-bg/issues/10))
