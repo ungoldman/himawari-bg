@@ -7,6 +7,7 @@ var untildify = require('untildify')
 var bar = null
 
 module.exports = function (opts) {
+  opts = opts || {}
   var outfile = untildify(opts.outfile || `~/Pictures/himawari-images/${Date.now()}.jpg`)
 
   // create outfile directory just in case
