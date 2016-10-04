@@ -134,7 +134,6 @@ Here are some useful links if you're interested in learning more about the Himaw
 - [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
 - [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
 - [himawari.js](https://github.com/jakiestfu/himawari.js)
-- [himawari-bg](https://github.com/ungoldman/himawari-bg)
 - [himawari-urls](https://github.com/ungoldman/himawari-urls)
 - [himawari-history](https://github.com/ungoldman/himawari-history)
 
