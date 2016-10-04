@@ -6,13 +6,17 @@ Set the latest image from Himawari 8 as your desktop background.
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 
-## Overview
+## About
 
-[Himawari 8](http://himawari8.nict.go.jp/) is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes.
+**[Himawari 8](http://himawari8.nict.go.jp/)** is a [geostationary](https://en.wikipedia.org/wiki/Geostationary_orbit) weather satellite deployed by the [Japan Meteorological Agency](http://www.jma.go.jp/jma/indexe.html). It takes photographs of Earth every 10 minutes.
 
-`himawari-bg` is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
+**himawari-bg** is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.
 
 ![](screenshot.jpg)
+
+### Desktop Version
+
+This project is now available as a menubar app that automatically sets your background every ten minutes for maximum freshness! Please see **[hi8](https://github.com/ungoldman/hi8)** for more info.
 
 ## Install
 
@@ -123,13 +127,16 @@ Here are some useful links if you're interested in learning more about the Himaw
 
 ### Related Projects
 
-- by @[celoyd](https://github.com/celoyd):
-  - [Glittering Blue](http://glittering.blue)
-  - [Himawari 8 animation tutorial](https://gist.github.com/celoyd/b92d0de6fae1f18791ef)
-  - [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
-  - [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
-- [himawari.js](https://github.com/jakiestfu/himawari.js) by @[jakiestfu](https://github.com/jakiestfu)
-- [himawari-urls](https://github.com/ungoldman/himawari-urls) by @[ungoldman](https://github.com/ungoldman)
+- [hi8](https://github.com/ungoldman/hi8) (menubar app version)
+- [Glittering Blue](http://glittering.blue)
+- [celoyd/hi8](https://github.com/celoyd/hi8)
+- [Himawari 8 animation tutorial](https://gist.github.com/celoyd/b92d0de6fae1f18791ef)
+- [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
+- [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
+- [himawari.js](https://github.com/jakiestfu/himawari.js)
+- [himawari-bg](https://github.com/ungoldman/himawari-bg)
+- [himawari-urls](https://github.com/ungoldman/himawari-urls)
+- [himawari-history](https://github.com/ungoldman/himawari-history)
 
 ## Contributing
 
