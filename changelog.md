@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.2](https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.2) - 2022-04-14
+
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.1...v1.0.2)
+
+### Fixes
+- fix: switch to @ungoldman/himawari to fix breaking underlying bug
+
+The source for the image tiles, Japan's NICT (National Institute of Information
+and Communications Technology), switched to HTTPS only. The library that fetches
+those tiles, [himawari.js](https://github.com/jakiestfu/himawari.js/) hasn't been updated in 6 years. In an effort to get my old himawari
+projects working again, I forked himawari.js, fixed it, and republished it as
+@ungoldman/himawari.
+
+This program should now work again! Apologies to anyone who has been
+unsuccessfully trying to update their wallpaper for the last 2 or 3 years.
+
 ## [1.0.1](https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.1) - 2016-10-03
 
 [view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.0...v1.0.1)
