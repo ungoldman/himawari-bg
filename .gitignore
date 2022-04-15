@@ -3,3 +3,4 @@ logs
 .DS_Store
 node_modules
 site
+package-lock.json
