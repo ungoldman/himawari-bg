@@ -1,4 +1,4 @@
-const himawari = require('himawari')
+const himawari = require('@ungoldman/himawari')
 const path = require('path')
 const wallpaper = require('wallpaper')
 const mkdirp = require('mkdirp')
