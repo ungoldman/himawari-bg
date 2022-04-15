@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>himawari-bg change log</title>
+    <link rel="stylesheet" href="https://ungoldman.github.io/style.css/site.css">
+    <link rel="stylesheet" href="https://ungoldman.github.io/index.css">
+  </head>
+  <body>
+    <nav class="top-bar">
+      <div class="top-bar-title">
+        <a href="https://ungoldman.github.io">🍕 ungoldman</a>
+        <span>/</span>
+        <a href="./">🌏 himawari-bg</a>
+      </div>
+      <div class="top-bar-right">
+        <a class="top-bar-link" href="https://github.com/ungoldman/himawari-bg">🐈 github</a>
+      </div>
+    </nav>
+    <main class="markdown-body"><h1>himawari-bg change log</h1>
+<p>All notable changes to this project will be documented in this file.
+This project adheres to <a href="http://semver.org/">Semantic Versioning</a>.</p>
+<h2><a href="https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.2">1.0.2</a> - 2022-04-14</h2>
+<p><a href="https://github.com/ungoldman/himawari-bg/compare/v1.0.1...v1.0.2">view diff</a></p>
+<h3>Fixes</h3>
+<ul>
+<li>fix: switch to @ungoldman/himawari to fix breaking underlying bug</li>
+</ul>
+<p>The source for the image tiles, Japan’s NICT (National Institute of Information
+and Communications Technology), switched to HTTPS only. The library that fetches
+those tiles, <a href="https://github.com/jakiestfu/himawari.js/">himawari.js</a> hasn’t been updated in 6 years. In an effort to get my old himawari
+projects working again, I forked himawari.js, fixed it, and republished it as
+@ungoldman/himawari.</p>
+<p>This program should now work again! Apologies to anyone who has been
+unsuccessfully trying to update their wallpaper for the last 2 or 3 years.</p>
+<h2><a href="https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.1">1.0.1</a> - 2016-10-03</h2>
+<p><a href="https://github.com/ungoldman/himawari-bg/compare/v1.0.0...v1.0.1">view diff</a></p>
+<h3>Fixes</h3>
+<ul>
+<li>bugfix: allow omitting options object (<a href="https://github.com/ungoldman/himawari-bg/issues/10">#10</a>)</li>
+</ul>
+<h2><a href="https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.0">1.0.0</a> - 2016-09-17</h2>
+<p><a href="https://github.com/ungoldman/himawari-bg/compare/v1.0.0-beta...v1.0.0">view diff</a></p>
+<ul>
+<li>lint: bump standard to latest version (^8), use snazzy</li>
+<li>site: add scripts for generating a gh-pages site</li>
+<li>ci: target node 6 only</li>
+</ul>
+<h2>1.0.0-beta</h2>
+<ul>
+<li>parallelize downloads by default</li>
+<li>add version option</li>
+<li>add resources, contributing sections to readme</li>
+<li>expand contributing guidelines</li>
+</ul>
+<h2>1.0.0-alpha.3</h2>
+<ul>
+<li>use himawari@^1.2.3 (ETIMEDOUT bug fix for <a href="https://github.com/ungoldman/himawari-bg/issues/5">#5</a>)</li>
+<li>improve docs, add links</li>
+<li>add example script</li>
+</ul>
+<h2>1.0.0-alpha.2</h2>
+<ul>
+<li>improve documentation based on feedback</li>
+</ul>
+<h2>1.0.0-alpha.1</h2>
+<ul>
+<li>add warning about magick</li>
+<li>add install instructions for imagemagick, graphicsmagick</li>
+<li>improve docs</li>
+</ul>
+<h2>1.0.0-alpha</h2>
+<ul>
+<li>alpha release</li>
+</ul>
+</main>
+  
+
+</body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>himawari-bg</title>
+    <link rel="stylesheet" href="https://ungoldman.github.io/style.css/site.css">
+    <link rel="stylesheet" href="https://ungoldman.github.io/index.css">
+  </head>
+  <body>
+    <nav class="top-bar">
+      <div class="top-bar-title">
+        <a href="https://ungoldman.github.io">🍕 ungoldman</a>
+        <span>/</span>
+        <a href="./">🌏 himawari-bg</a>
+      </div>
+      <div class="top-bar-right">
+        <a class="top-bar-link" href="https://github.com/ungoldman/himawari-bg">🐈 github</a>
+      </div>
+    </nav>
+    <main class="markdown-body"><h1>himawari-bg</h1>
+<p>Set the latest image from Himawari 8 as your desktop background.</p>
+<p><a href="https://www.npmjs.com/package/himawari-bg"><img src="https://img.shields.io/npm/v/himawari-bg.svg" alt="npm"></a>
+<a href="https://travis-ci.org/ungoldman/himawari-bg"><img src="https://img.shields.io/travis/ungoldman/himawari-bg.svg" alt="travis"></a>
+<a href="https://www.npmjs.com/package/himawari-bg"><img src="https://img.shields.io/npm/dm/himawari-bg.svg" alt="downloads"></a></p>
+<h2>About</h2>
+<p><strong><a href="http://himawari8.nict.go.jp/">Himawari 8</a></strong> is a <a href="https://en.wikipedia.org/wiki/Geostationary_orbit">geostationary</a> weather satellite deployed by the <a href="http://www.jma.go.jp/jma/indexe.html">Japan Meteorological Agency</a>. It takes photographs of Earth every 10 minutes.</p>
+<p><strong>himawari-bg</strong> is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.</p>
+<p><img src="screenshot.jpg" alt=""></p>
+<h3>Desktop Version</h3>
+<p>This project is now available as a menubar app that automatically sets your background every ten minutes for maximum freshness! Please see <strong><a href="https://github.com/ungoldman/hi8">hi8</a></strong> for more info.</p>
+<h2>Install</h2>
+<p>Warning: requires ⚡ <strong>magick</strong> ⚡</p>
+<ul>
+<li><a href="http://www.imagemagick.org/script/index.php">imagemagick</a></li>
+<li><a href="http://www.graphicsmagick.org">graphicsmagick</a></li>
+<li><a href="https://nodejs.org/en/download/">node.js</a></li>
+</ul>
+<p>If you have <a href="http://brew.sh/">homebrew</a> installed, you can use that to quickly install <code>imagemagick</code> and <code>graphicsmagick</code>. The rest of the program can be easily installed with <a href="https://www.npmjs.com/"><code>npm</code></a>.</p>
+<pre><code class="hljs">brew install imagemagick
+brew install graphicsmagick
+npm install --global himawari-bg
+</code></pre>
+<p>Note: This is alpha quality! Tested only on OSX.</p>
+<h2>Usage</h2>
+<h3>Command Line</h3>
+<p>You can run <code>himawari-bg</code> on the command line after it’s been installed globally with <code>npm</code>.</p>
+<p>If you run <code>himawari-bg</code> with no arguments, it will download the latest image from Himawari-8 and set it as your desktop background.</p>
+<p>👉 You have to set the background color of your desktop to black manually if you want it to look as cool as possible.</p>
+<p>There are some options available if you’d like to go further:</p>
+<pre><code class="hljs">Usage: himawari-bg [options]
+
+    --outfile, -o         Location to save image. (default: ~/Pictures/himawari-images/$TIMESTAMP.jpg)
+    --zoom, -z            The zoom level of the image. Can be 1-5. (default: 2)
+    --date, -d            Time of the picture desired. Can also be "latest". (default: "latest")
+    --infrared, -i        Capture picture on the infrared spectrum. (default: false)
+    --parallel, -p        Parallelize downloads for increased speeds (can be CPU intensive). (default: true)
+    --version, -v         Show version information.
+    --help, -h            Show help.
+</code></pre>
+<h3>Node.js</h3>
+<p><code>himawari-bg</code> can also be used programmatically as a node module:</p>
+<pre><code class="hljs">npm install himawari-bg
+</code></pre>
+<p>Here is an example of how it works in node:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">var</span> bg = <span class="hljs-built_in">require</span>(<span class="hljs-string">'himawari-bg'</span>)
+
+<span class="hljs-title function_">bg</span>({
+  <span class="hljs-comment">/**
+   * The location to save the resulting image.
+   * Default: `~/Pictures/himawari-images/${Date.now()}.jpg`
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">String</span>}
+   */</span>
+  <span class="hljs-attr">outfile</span>: <span class="hljs-string">'/path/to/output/earth.jpg'</span>,
+
+  <span class="hljs-comment">/**
+   * The time of the picture desired. If you want to get the latest image, use 'latest'.
+   * Default: 'latest'
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">String|Date</span>}
+   */</span>
+  <span class="hljs-attr">date</span>: <span class="hljs-string">'latest'</span>, <span class="hljs-comment">// Or new Date() or a date string</span>
+
+  <span class="hljs-comment">/**
+   * The zoom level of the image. Can be 1-5 (default: 2)
+   * Each zoom level requires more images to be downloaded and therefore stitched
+   * together. Higher zoom yields a higher resolution image.
+   * Default: 2
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">Number</span>}
+   */</span>
+  <span class="hljs-attr">zoom</span>: <span class="hljs-number">2</span>,
+
+  <span class="hljs-comment">/**
+   * If set to true, an image on the infrared light spectrum will be generated
+   * Default: false
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">Boolean</span>}
+   */</span>
+  <span class="hljs-attr">infrared</span>: <span class="hljs-literal">false</span>
+})
+</code></pre>
+<h2>Acknowledgements</h2>
+<p>Thanks to <a href="https://github.com/celoyd">celoyd</a> for the inspiring <a href="https://glittering.blue/"><code>glittering.blue</code></a> and <a href="https://github.com/jakiestfu">jakiestfu</a> for creating <a href="https://github.com/jakiestfu/himawari.js"><code>himawari.js</code></a>.</p>
+<h2>Addendum</h2>
+<p>It turns out <code>himawari.js</code> was inspired by <a href="https://gist.github.com/MichaelPote/92fa6e65eacf26219022">this gist</a> by <a href="https://github.com/MichaelPote">MichaelPote</a> which basically does the exact same thing as <code>himawari-bg</code> except in a Windows Powershell environment. So I unwittingly made something inspired by something that was inspired by something that does what I did. Internet! <code>¯\_(ツ)_/¯</code></p>
+<h2>Additional Resources</h2>
+<p>Here are some useful links if you’re interested in learning more about the Himawari 8 satellite.</p>
+<h3>Official</h3>
+<ul>
+<li><a href="http://himawari8.nict.go.jp">Himawari 8 Real-time Web</a></li>
+<li><a href="http://www.eorc.jaxa.jp/ptree/userguide.html">Himawari Data Guide</a></li>
+<li><a href="http://www.data.jma.go.jp/mscweb/en/himawari89/space_segment/hsd_sample/HS_D_users_guide_en_v12.pdf">Himawari 8/9 Standard Data User’s Guide</a></li>
+<li><a href="http://www.eorc.jaxa.jp/ptree/registration_top.html">JAXA account registration (for access to more data)</a></li>
+</ul>
+<h3>Related Projects</h3>
+<ul>
+<li><a href="https://github.com/ungoldman/hi8">hi8</a> (menubar app version)</li>
+<li><a href="http://glittering.blue">Glittering Blue</a></li>
+<li><a href="https://github.com/celoyd/hi8">celoyd/hi8</a></li>
+<li><a href="https://gist.github.com/celoyd/b92d0de6fae1f18791ef">Himawari 8 animation tutorial</a></li>
+<li><a href="https://gist.github.com/celoyd/a4dd9202fe5c7978b114">deband python script</a></li>
+<li><a href="https://gist.github.com/celoyd/c2293929ab3fe97ea597">makeaday bash script</a></li>
+<li><a href="https://github.com/jakiestfu/himawari.js">himawari.js</a></li>
+<li><a href="https://github.com/ungoldman/himawari-urls">himawari-urls</a></li>
+<li><a href="https://github.com/ungoldman/himawari-history">himawari-history</a></li>
+</ul>
+<h2>Contributing</h2>
+<p>Contributions welcome! Please read the <a href="contributing/">contributing guidelines</a> before getting started.</p>
+<h2>License</h2>
+<p><a href="license/">ISC</a></p>
+</main>
+  
+
+</body></html>
