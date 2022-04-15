@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "live-server": "^1.1.0",
     "npm-run-all": "^3.1.0",
+    "serve": "^13.0.2",
     "sitedown": "^5.0.1",
     "snazzy": "^5.0.0",
     "standard": "^16.0.4"
@@ -44,7 +44,7 @@
   },
   "scripts": {
     "gh-pages": "npm run site && gh-pages -d site",
-    "serve:site": "live-server site",
+    "serve:site": "serve site",
     "serve:watch": "npm run site:html -- -w",
     "site": "run-s site:*",
     "site:clean": "rm -rf site",
