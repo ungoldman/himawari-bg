@@ -20,10 +20,6 @@ Set the latest image from Himawari 8 as your desktop background.
 
 ![](screenshot.jpg)
 
-### Desktop Version
-
-This project is now available as a menubar app that automatically sets your background every ten minutes for maximum freshness! Please see **[hi8](https://github.com/ungoldman/hi8)** for more info.
-
 ## Install
 
 Warning: requires :zap: **magick** :zap:
@@ -32,21 +28,24 @@ Warning: requires :zap: **magick** :zap:
 * [graphicsmagick](http://www.graphicsmagick.org)
 * [node.js](https://nodejs.org/en/download/)
 
-If you have [homebrew](http://brew.sh/) installed, you can use that to quickly install `imagemagick` and `graphicsmagick`. The rest of the program can be easily installed with [`npm`](https://www.npmjs.com/).
+If you have [homebrew](http://brew.sh/) installed, you can use that to quickly install `imagemagick` and `graphicsmagick`.
 
 ```
 brew install imagemagick
 brew install graphicsmagick
-npm install --global himawari-bg
 ```
 
-Note: This is alpha quality! Tested only on OSX.
+Once you have magick on your side, you can run himawari-bg anytime:
+
+```
+npx himawari-bg
+```
 
 ## Usage
 
 ### Command Line
 
-You can run `himawari-bg` on the command line after it's been installed globally with `npm`.
+You can run `himawari-bg` on the command line with `npx` or via global install (`npm i -g himawari-bg`).
 
 If you run `himawari-bg` with no arguments, it will download the latest image from Himawari-8 and set it as your desktop background.
 
