@@ -4,7 +4,13 @@ Set the latest image from Himawari 8 as your desktop background.
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
-[![standard][standard-image]][standard-url]
+[![downloads][downloads-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/himawari-bg.svg
+[npm-url]: https://www.npmjs.com/package/himawari-bg
+[travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg
+[travis-url]: https://travis-ci.org/ungoldman/himawari-bg
+[downloads-image]: https://img.shields.io/npm/dm/himawari-bg.svg
 
 ## About
 
@@ -144,10 +150,3 @@ Contributions welcome! Please read the [contributing guidelines](contributing.md
 ## License
 
 [ISC](LICENSE.md)
-
-[npm-image]: https://img.shields.io/npm/v/himawari-bg.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/himawari-bg
-[travis-image]: https://img.shields.io/travis/ungoldman/himawari-bg.svg?style=flat-square
-[travis-url]: https://travis-ci.org/ungoldman/himawari-bg
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[standard-url]: http://npm.im/standard
