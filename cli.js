@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var bg = require('./')
-var cliclopts = require('cliclopts')
-var minimist = require('minimist')
-var pkg = require('./package.json')
+const bg = require('./')
+const cliclopts = require('cliclopts')
+const minimist = require('minimist')
+const pkg = require('./package.json')
 
-var allowedOptions = [
+const allowedOptions = [
   {
     name: 'outfile',
     abbr: 'o',
@@ -51,8 +51,8 @@ var allowedOptions = [
   }
 ]
 
-var opts = cliclopts(allowedOptions)
-var argv = minimist(process.argv.slice(2), opts.options())
+const opts = cliclopts(allowedOptions)
+const argv = minimist(process.argv.slice(2), opts.options())
 
 if (argv.version) {
   console.log(pkg.version)

@@ -1,14 +1,14 @@
-var himawari = require('himawari')
-var path = require('path')
-var wallpaper = require('wallpaper')
-var mkdirp = require('mkdirp')
-var ProgressBar = require('progress')
-var untildify = require('untildify')
-var bar = null
+const himawari = require('himawari')
+const path = require('path')
+const wallpaper = require('wallpaper')
+const mkdirp = require('mkdirp')
+const ProgressBar = require('progress')
+const untildify = require('untildify')
+let bar = null
 
 module.exports = function (opts) {
   opts = opts || {}
-  var outfile = untildify(opts.outfile || `~/Pictures/himawari-images/${Date.now()}.jpg`)
+  const outfile = untildify(opts.outfile || `~/Pictures/himawari-images/${Date.now()}.jpg`)
 
   // create outfile directory just in case
   mkdirp.sync(path.dirname(outfile))

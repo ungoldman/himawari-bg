@@ -1,4 +1,4 @@
-var bg = require('./')
+const bg = require('./')
 
 bg({
   /**
