@@ -24,8 +24,6 @@
 <p><strong><a href="http://himawari8.nict.go.jp/">Himawari 8</a></strong> is a <a href="https://en.wikipedia.org/wiki/Geostationary_orbit">geostationary</a> weather satellite deployed by the <a href="http://www.jma.go.jp/jma/indexe.html">Japan Meteorological Agency</a>. It takes photographs of Earth every 10 minutes.</p>
 <p><strong>himawari-bg</strong> is a command line program that lets you set the latest image from the Himawari 8 geostationary satellite as your desktop background.</p>
 <p><img src="screenshot.jpg" alt=""></p>
-<h3>Desktop Version</h3>
-<p>This project is now available as a menubar app that automatically sets your background every ten minutes for maximum freshness! Please see <strong><a href="https://github.com/ungoldman/hi8">hi8</a></strong> for more info.</p>
 <h2>Install</h2>
 <p>Warning: requires ⚡ <strong>magick</strong> ⚡</p>
 <ul>
@@ -33,15 +31,16 @@
 <li><a href="http://www.graphicsmagick.org">graphicsmagick</a></li>
 <li><a href="https://nodejs.org/en/download/">node.js</a></li>
 </ul>
-<p>If you have <a href="http://brew.sh/">homebrew</a> installed, you can use that to quickly install <code>imagemagick</code> and <code>graphicsmagick</code>. The rest of the program can be easily installed with <a href="https://www.npmjs.com/"><code>npm</code></a>.</p>
+<p>If you have <a href="http://brew.sh/">homebrew</a> installed, you can use that to quickly install <code>imagemagick</code> and <code>graphicsmagick</code>.</p>
 <pre><code class="hljs">brew install imagemagick
 brew install graphicsmagick
-npm install --global himawari-bg
 </code></pre>
-<p>Note: This is alpha quality! Tested only on OSX.</p>
+<p>Once you have magick on your side, you can run himawari-bg anytime:</p>
+<pre><code class="hljs">npx himawari-bg
+</code></pre>
 <h2>Usage</h2>
 <h3>Command Line</h3>
-<p>You can run <code>himawari-bg</code> on the command line after it’s been installed globally with <code>npm</code>.</p>
+<p>You can run <code>himawari-bg</code> on the command line with <code>npx</code> or via global install (<code>npm i -g himawari-bg</code>).</p>
 <p>If you run <code>himawari-bg</code> with no arguments, it will download the latest image from Himawari-8 and set it as your desktop background.</p>
 <p>👉 You have to set the background color of your desktop to black manually if you want it to look as cool as possible.</p>
 <p>There are some options available if you’d like to go further:</p>
