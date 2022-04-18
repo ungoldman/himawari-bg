@@ -46,7 +46,7 @@ const allowedOptions = [
   {
     name: 'scale',
     help: 'Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center".',
-    default: 'auto'
+    default: 'fit'
   },
   {
     name: 'version',
