@@ -20,7 +20,7 @@
     <main class="markdown-body"><h1>himawari-bg</h1>
 <p>Set the latest image from Himawari 8 as your desktop background.</p>
 <p><a href="https://www.npmjs.com/package/himawari-bg"><img src="https://img.shields.io/npm/v/himawari-bg.svg" alt="npm"></a>
-<a href="https://travis-ci.org/ungoldman/himawari-bg"><img src="https://img.shields.io/travis/ungoldman/himawari-bg.svg" alt="travis"></a>
+<a href="https://github.com/ungoldman/himawari-bg/actions/workflows/tests.yml"><img src="https://github.com/ungoldman/himawari-bg/actions/workflows/tests.yml/badge.svg" alt="build"></a>
 <a href="https://www.npmjs.com/package/himawari-bg"><img src="https://img.shields.io/npm/dm/himawari-bg.svg" alt="downloads"></a></p>
 <h2>About</h2>
 <p><strong><a href="http://himawari8.nict.go.jp/">Himawari 8</a></strong> is a <a href="https://en.wikipedia.org/wiki/Geostationary_orbit">geostationary</a> weather satellite deployed by the <a href="http://www.jma.go.jp/jma/indexe.html">Japan Meteorological Agency</a>. It takes photographs of Earth every 10 minutes.</p>
@@ -53,6 +53,8 @@ brew install graphicsmagick
     --date, -d            Time of the picture desired. Can also be "latest". (default: "latest")
     --infrared, -i        Capture picture on the infrared spectrum. (default: false)
     --parallel, -p        Parallelize downloads for increased speeds (can be CPU intensive). (default: true)
+    --screen, -s          Screen to set the wallpaper on (macOS only). Options: "all", "main", screen index. (default: "main")
+    --scale               Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center". (default: "fit")
     --version, -v         Show version information.
     --help, -h            Show help.
 </code></pre>
@@ -61,9 +63,9 @@ brew install graphicsmagick
 <pre><code class="hljs">npm install himawari-bg
 </code></pre>
 <p>Here is an example of how it works in node:</p>
-<pre><code class="hljs language-js"><span class="hljs-keyword">var</span> bg = <span class="hljs-built_in">require</span>(<span class="hljs-string">'himawari-bg'</span>)
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> himawariBG = <span class="hljs-built_in">require</span>(<span class="hljs-string">'himawari-bg'</span>)
 
-<span class="hljs-title function_">bg</span>({
+<span class="hljs-title function_">himawariBG</span>({
   <span class="hljs-comment">/**
    * The location to save the resulting image.
    * Default: `~/Pictures/himawari-images/${Date.now()}.jpg`
@@ -92,8 +94,36 @@ brew install graphicsmagick
    * Default: false
    * <span class="hljs-doctag">@type</span> {<span class="hljs-type">Boolean</span>}
    */</span>
-  <span class="hljs-attr">infrared</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-attr">infrared</span>: <span class="hljs-literal">false</span>,
+
+  <span class="hljs-comment">/**
+   * Screen to set the wallpaper on (macOS only)
+   * Options: 'all', 'main', screen index
+   * Default: 'main'
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">String|Number</span>}
+   */</span>
+  <span class="hljs-attr">screen</span>: <span class="hljs-string">'main'</span>,
+
+  <span class="hljs-comment">/**
+   * Scaling method (macOS only)
+   * Options: 'auto', 'fill', 'fit', 'stretch', 'center'
+   * Default: 'fit'
+   * <span class="hljs-doctag">@type</span> {<span class="hljs-type">String|Number</span>}
+   */</span>
+  <span class="hljs-attr">scale</span>: <span class="hljs-string">'fit'</span>
 })
+</code></pre>
+<p>All config settings are optional and have default values.</p>
+<p><code>himawariBG</code> returns a promise, so it can be used in an async workflow if needed.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> himawariBG = <span class="hljs-built_in">require</span>(<span class="hljs-string">'himawari-bg'</span>)
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">await</span> <span class="hljs-title function_">himawariBG</span>()
+  } <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err)
+  }
+}
 </code></pre>
 <h2>Acknowledgements</h2>
 <p>Thanks to <a href="https://github.com/celoyd">celoyd</a> for the inspiring <a href="https://glittering.blue/"><code>glittering.blue</code></a> and <a href="https://github.com/jakiestfu">jakiestfu</a> for creating <a href="https://github.com/jakiestfu/himawari.js"><code>himawari.js</code></a>.</p>
@@ -110,15 +140,14 @@ brew install graphicsmagick
 </ul>
 <h3>Related Projects</h3>
 <ul>
-<li><a href="https://github.com/ungoldman/hi8">hi8</a> (menubar app version)</li>
+<li><a href="https://github.com/ungoldman/himawari">@ungoldman/himawari</a></li>
+<li><a href="https://github.com/ungoldman/himawari-urls">himawari-urls</a></li>
+<li><a href="https://github.com/ungoldman/himawari-history">himawari-history</a></li>
 <li><a href="http://glittering.blue">Glittering Blue</a></li>
 <li><a href="https://github.com/celoyd/hi8">celoyd/hi8</a></li>
 <li><a href="https://gist.github.com/celoyd/b92d0de6fae1f18791ef">Himawari 8 animation tutorial</a></li>
 <li><a href="https://gist.github.com/celoyd/a4dd9202fe5c7978b114">deband python script</a></li>
 <li><a href="https://gist.github.com/celoyd/c2293929ab3fe97ea597">makeaday bash script</a></li>
-<li><a href="https://github.com/jakiestfu/himawari.js">himawari.js</a></li>
-<li><a href="https://github.com/ungoldman/himawari-urls">himawari-urls</a></li>
-<li><a href="https://github.com/ungoldman/himawari-history">himawari-history</a></li>
 </ul>
 <h2>Contributing</h2>
 <p>Contributions welcome! Please read the <a href="contributing/">contributing guidelines</a> before getting started.</p>
