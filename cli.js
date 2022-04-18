@@ -38,6 +38,17 @@ const allowedOptions = [
     default: true
   },
   {
+    name: 'screen',
+    abbr: 's',
+    help: 'Screen to set the wallpaper on (macOS only). Options: "all", "main", screen index.',
+    default: 'main'
+  },
+  {
+    name: 'scale',
+    help: 'Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center".',
+    default: 'auto'
+  },
+  {
     name: 'version',
     abbr: 'v',
     help: 'Show version information.',

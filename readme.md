@@ -58,6 +58,8 @@ Usage: himawari-bg [options]
     --date, -d            Time of the picture desired. Can also be "latest". (default: "latest")
     --infrared, -i        Capture picture on the infrared spectrum. (default: false)
     --parallel, -p        Parallelize downloads for increased speeds (can be CPU intensive). (default: true)
+    --screen, -s          Screen to set the wallpaper on (macOS only). Options: "all", "main", screen index. (default: "main")
+    --scale               Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center". (default: "auto")
     --version, -v         Show version information.
     --help, -h            Show help.
 ```

@@ -29,7 +29,7 @@ module.exports = function (opts) {
     },
     success: function () {
       console.log(`Setting ${outfile} as background...`)
-      wallpaper.set(outfile)
+      wallpaper.set(outfile, { screen: opts.screen || 'main', scale: opts.scale || 'fit' })
       console.log('Complete!')
     }
   })
