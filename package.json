@@ -26,6 +26,9 @@
     "snazzy": "^9.0.0",
     "standard": "^16.0.4"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "homepage": "https://github.com/ungoldman/himawari-bg",
   "keywords": [
     "background",
