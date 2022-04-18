@@ -15,7 +15,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: lts/*
-    - name: Install external dependencies (imagemagick & friends)
-      run: sudo apt-get install -y imagemagick ghostscript graphicsmagick
+    - run: brew install imagemagick graphicsmagick
     - run: npm i
     - run: npm test
