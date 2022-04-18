@@ -16,7 +16,7 @@
     "mkdirp": "^0.5.1",
     "progress": "^1.1.8",
     "untildify": "^2.1.0",
-    "wallpaper": "^5.0.1"
+    "wallpaper": "^6.1.1"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
