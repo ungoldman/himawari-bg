@@ -62,7 +62,7 @@ Usage: himawari-bg [options]
     --infrared, -i        Capture picture on the infrared spectrum. (default: false)
     --parallel, -p        Parallelize downloads for increased speeds (can be CPU intensive). (default: true)
     --screen, -s          Screen to set the wallpaper on (macOS only). Options: "all", "main", screen index. (default: "main")
-    --scale               Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center". (default: "auto")
+    --scale               Scaling method (macOS only). Options: "auto", "fill", "fit", "stretch", "center". (default: "fit")
     --version, -v         Show version information.
     --help, -h            Show help.
 ```
@@ -78,9 +78,9 @@ npm install himawari-bg
 Here is an example of how it works in node:
 
 ```js
-var bg = require('himawari-bg')
+const himawariBG = require('himawari-bg')
 
-bg({
+himawariBG({
   /**
    * The location to save the resulting image.
    * Default: `~/Pictures/himawari-images/${Date.now()}.jpg`
@@ -109,8 +109,40 @@ bg({
    * Default: false
    * @type {Boolean}
    */
-  infrared: false
+  infrared: false,
+
+  /**
+   * Screen to set the wallpaper on (macOS only)
+   * Options: 'all', 'main', screen index
+   * Default: 'main'
+   * @type {String|Number}
+   */
+  screen: 'main',
+
+  /**
+   * Scaling method (macOS only)
+   * Options: 'auto', 'fill', 'fit', 'stretch', 'center'
+   * Default: 'fit'
+   * @type {String|Number}
+   */
+  scale: 'fit'
 })
+```
+
+All config settings are optional and have default values.
+
+`himawariBG` returns a promise, so it can be used in an async workflow if needed.
+
+```js
+const himawariBG = require('himawari-bg')
+
+async function () {
+  try {
+    await himawariBG()
+  } catch (err) {
+    console.log(err)
+  }
+}
 ```
 
 ## Acknowledgements
@@ -134,15 +166,14 @@ Here are some useful links if you're interested in learning more about the Himaw
 
 ### Related Projects
 
-- [hi8](https://github.com/ungoldman/hi8) (menubar app version)
+- [@ungoldman/himawari](https://github.com/ungoldman/himawari)
+- [himawari-urls](https://github.com/ungoldman/himawari-urls)
+- [himawari-history](https://github.com/ungoldman/himawari-history)
 - [Glittering Blue](http://glittering.blue)
 - [celoyd/hi8](https://github.com/celoyd/hi8)
 - [Himawari 8 animation tutorial](https://gist.github.com/celoyd/b92d0de6fae1f18791ef)
 - [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
 - [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
-- [himawari.js](https://github.com/jakiestfu/himawari.js)
-- [himawari-urls](https://github.com/ungoldman/himawari-urls)
-- [himawari-history](https://github.com/ungoldman/himawari-history)
 
 ## Contributing
 

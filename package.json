@@ -24,7 +24,9 @@
     "serve": "^13.0.2",
     "sitedown": "^5.0.1",
     "snazzy": "^9.0.0",
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "tap-arc": "^0.3.4",
+    "tape": "^5.5.3"
   },
   "engines": {
     "node": ">=12"
@@ -47,6 +49,7 @@
   },
   "scripts": {
     "gh-pages": "npm run site && gh-pages -d site",
+    "pretest": "standard | snazzy",
     "serve:site": "serve site",
     "serve:watch": "npm run site:html -- -w",
     "site": "run-s site:*",
@@ -54,6 +57,6 @@
     "site:html": "sitedown -b site -l docs/layout.html",
     "site:img": "cp screenshot.jpg site/",
     "start": "npm-run-all site --parallel serve:*",
-    "test": "standard | snazzy"
+    "test": "tape test.js | tap-arc"
   }
 }

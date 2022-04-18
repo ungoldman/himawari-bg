@@ -6,32 +6,35 @@ const ProgressBar = require('progress')
 const untildify = require('untildify')
 let bar = null
 
-module.exports = function (opts) {
+async function himawariBG (opts) {
   opts = opts || {}
   const outfile = untildify(opts.outfile || `~/Pictures/himawari-images/${Date.now()}.jpg`)
 
   // create outfile directory just in case
   mkdirp.sync(path.dirname(outfile))
 
-  himawari({
-    zoom: opts.zoom || 2,
-    outfile: outfile,
-    date: opts.date || 'latest',
-    infrared: opts.infrared || false,
-    parallel: opts.parallel | true,
-    chunk: function (info) {
-      bar = bar || createProgressBar(info.total)
-      bar.tick()
-    },
-    error: function (err) {
-      console.log(err)
-      process.exit(1)
-    },
-    success: function () {
-      console.log(`Setting ${outfile} as background...`)
-      wallpaper.set(outfile, { screen: opts.screen || 'main', scale: opts.scale || 'fit' })
-      console.log('Complete!')
-    }
+  return new Promise((resolve, reject) => {
+    himawari({
+      zoom: opts.zoom || 2,
+      outfile: outfile,
+      date: opts.date || 'latest',
+      infrared: opts.infrared || false,
+      parallel: opts.parallel | true,
+      chunk: function (info) {
+        bar = bar || createProgressBar(info.total)
+        bar.tick()
+      },
+      error: function (err) {
+        console.log(err)
+        reject(err)
+      },
+      success: async function () {
+        await sleep(250) // add delay to avoid flash of system bg
+        wallpaper.set(outfile, { screen: opts.screen || 'main', scale: opts.scale || 'fit' })
+        console.log('Complete!')
+        resolve()
+      }
+    })
   })
 }
 
@@ -43,3 +46,10 @@ function createProgressBar (total) {
     total: total
   })
 }
+
+// shh
+function sleep (ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+module.exports = himawariBG
