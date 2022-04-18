@@ -3,10 +3,13 @@
 Set the latest image from Himawari 8 as your desktop background.
 
 [![npm][npm-image]][npm-url]
+[![build][build-image]][build-url]
 [![downloads][downloads-image]][npm-url]
 
 [npm-image]: https://img.shields.io/npm/v/himawari-bg.svg
 [npm-url]: https://www.npmjs.com/package/himawari-bg
+[build-image]: https://github.com/ungoldman/himawari-bg/actions/workflows/tests.yml/badge.svg
+[build-url]: https://github.com/ungoldman/himawari-bg/actions/workflows/tests.yml
 [downloads-image]: https://img.shields.io/npm/dm/himawari-bg.svg
 
 ## About

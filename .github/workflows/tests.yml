@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js (Latest LTS)
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+    - run: npm i
+    - run: npm test
