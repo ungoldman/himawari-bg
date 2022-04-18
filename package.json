@@ -15,7 +15,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "progress": "^1.1.8",
-    "untildify": "^2.1.0",
+    "untildify": "^4.0.0",
     "wallpaper": "^5.0.1"
   },
   "devDependencies": {
