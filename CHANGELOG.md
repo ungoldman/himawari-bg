@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0](https://github.com/ungoldman/himawari-bg/releases/tag/v2.0.0) - 2022-04-18
+
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.2...v2.0.0)
+
+### Breaking
+- breaking: convert to async function (#15)
+- breaking: pkg(engines): set min node to 12
+
+### Features
+- feat: add screen & scale options
+
+### Misc
+- deps: progress@2
+- deps: mkdirp@1
+- deps: untildify@4
+- ci: add actual test, use gh actions
+
 ## [1.0.2](https://github.com/ungoldman/himawari-bg/releases/tag/v1.0.2) - 2022-04-14
 
 [view diff](https://github.com/ungoldman/himawari-bg/compare/v1.0.1...v1.0.2)
