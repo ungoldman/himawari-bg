@@ -174,10 +174,15 @@ Here are some useful links if you're interested in learning more about the Himaw
 - [Himawari 8 animation tutorial](https://gist.github.com/celoyd/b92d0de6fae1f18791ef)
 - [deband python script](https://gist.github.com/celoyd/a4dd9202fe5c7978b114)
 - [makeaday bash script](https://gist.github.com/celoyd/c2293929ab3fe97ea597)
+- [goes-bg](https://github.com/ungoldman/goes-bg)
+
+## History
+
+Read about updates and changes to this project in the [change log](CHANGELOG.md).
 
 ## Contributing
 
-Contributions welcome! Please read the [contributing guidelines](contributing.md) before getting started.
+Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) before getting started.
 
 ## License
 
