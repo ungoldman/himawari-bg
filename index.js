@@ -16,7 +16,7 @@ async function himawariBG (opts) {
   return new Promise((resolve, reject) => {
     himawari({
       zoom: opts.zoom || 2,
-      outfile: outfile,
+      outfile,
       date: opts.date || 'latest',
       infrared: opts.infrared || false,
       parallel: opts.parallel | true,
@@ -43,7 +43,7 @@ function createProgressBar (total) {
     complete: '=',
     incomplete: ' ',
     width: 20,
-    total: total
+    total
   })
 }
 
