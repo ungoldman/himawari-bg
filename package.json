@@ -19,9 +19,9 @@
     "wallpaper": "^5.0.1"
   },
   "devDependencies": {
+    "@ungoldman/serve": "^14.1.0",
     "gh-pages": "^3.2.3",
     "npm-run-all": "^4.1.5",
-    "serve": "^13.0.2",
     "sitedown": "^5.0.1",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
