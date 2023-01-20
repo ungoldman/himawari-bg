@@ -1,7 +1,18 @@
 # himawari-bg change log
+- All notable changes to this project will be documented in this file.
+- The format is based on [Keep a Changelog](https://keepachangelog.com).
+- This project adheres to [Semantic Versioning](https://semver.org).
 
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+## [2.0.1](https://github.com/ungoldman/himawari-bg/releases/tag/v2.0.1) - 2023-01-20
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v2.0.0...v2.0.1)
+
+Maintenance update. Replaces `@ungoldman/serve` (unmaintained) with latest `serve`.
+
+### Misc
+- deps(dev): @ungoldman/serve -> serve@^14.1.2 (security update)
+- deps(dev): sitedown@^5.1.3
+- deps(dev): gh-pages@^4.0.0
+- misc doc & site updates
 
 ## [2.0.0](https://github.com/ungoldman/himawari-bg/releases/tag/v2.0.0) - 2022-04-18
 
