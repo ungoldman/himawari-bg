@@ -13,7 +13,7 @@
     "@ungoldman/himawari": "^2.0.0",
     "cliclopts": "^1.1.1",
     "minimist": "^1.2.0",
-    "mkdirp": "^1.0.4",
+    "mkdirp": "^2.1.3",
     "progress": "^2.0.3",
     "untildify": "^4.0.0",
     "wallpaper": "^5.0.1"

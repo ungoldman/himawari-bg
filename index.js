@@ -1,7 +1,7 @@
 const himawari = require('@ungoldman/himawari')
 const path = require('path')
 const wallpaper = require('wallpaper')
-const mkdirp = require('mkdirp')
+const { mkdirp } = require('mkdirp')
 const ProgressBar = require('progress')
 const untildify = require('untildify')
 let bar = null
