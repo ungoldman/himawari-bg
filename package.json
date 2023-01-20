@@ -50,7 +50,7 @@
   "scripts": {
     "gh-pages": "npm run site && gh-pages -d site",
     "pretest": "standard | snazzy",
-    "release": "git push && git push --tags && npx gh-release && npm publish",
+    "release": "git fetch --all --prune && git push && git push --tags && npx gh-release && npm publish",
     "serve:site": "serve site",
     "serve:watch": "npm run site:html -- -w",
     "site": "run-s site:*",
