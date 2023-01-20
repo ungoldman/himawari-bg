@@ -3,6 +3,14 @@
 - The format is based on [Keep a Changelog](https://keepachangelog.com).
 - This project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.0.2](https://github.com/ungoldman/himawari-bg/releases/tag/v2.0.2) - 2023-01-20
+[view diff](https://github.com/ungoldman/himawari-bg/compare/v2.0.1...v2.0.2)
+
+Maintenance update. Updates usage of mkdirp dependency (upstream breaking change).
+
+### Misc
+- deps: mkdirp@^2.1.3
+
 ## [2.0.1](https://github.com/ungoldman/himawari-bg/releases/tag/v2.0.1) - 2023-01-20
 [view diff](https://github.com/ungoldman/himawari-bg/compare/v2.0.0...v2.0.1)
 
